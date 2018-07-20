@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/phaser.js"></script> 
+    <script src="js/phaser_addon.js"></script> 
+    <script src="js/boot.js"></script> 
+    <script src="js/preloader.js"></script> 
+    <script src="js/menuscene.js"></script> 
+    <script src="js/gamescene.js"></script> 
+    <script src="js/tutorial.js"></script> 
+</head>
+<body>
+
+    <script>
+
+	var config = {
+		type: Phaser.AUTO,
+		width: 800,
+		height: 600,
+		backgroundColor: '#006060',
+		parent: 'phaser-example',
+		physics: {
+				default: 'arcade',
+				arcade: {
+					gravity: 0
+				}
+			},
+		scene: [ Boot, Preloader, MainMenu, TutorScene, GameScene ]
+	};
+
+	var game = new Phaser.Game(config);
+    </script>
+
+</body>
+</html>

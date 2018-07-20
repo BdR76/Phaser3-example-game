@@ -1,0 +1,29 @@
+{
+	"frames":[
+		{"filename":"coin7","frame":{"x":444,"y":117,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"coin8","frame":{"x":477,"y":117,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"dude","frame":{"x":485,"y":311,"w":27,"h":40},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":27,"h":40},"sourceSize":{"w":27,"h":40}},
+		{"filename":"bombexpl1","frame":{"x":387,"y":182,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"bombexpl2","frame":{"x":387,"y":246,"w":64,"h":64},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":64,"h":64},"sourceSize":{"w":64,"h":64}},
+		{"filename":"phaser3","frame":{"x":0,"y":0,"w":512,"h":116},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":512,"h":116},"sourceSize":{"w":512,"h":116}},
+		{"filename":"bomb","frame":{"x":453,"y":182,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"sparkle1","frame":{"x":387,"y":117,"w":56,"h":64},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":56,"h":64},"sourceSize":{"w":56,"h":64}},
+		{"filename":"sparkle2","frame":{"x":452,"y":246,"w":56,"h":64},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":56,"h":64},"sourceSize":{"w":56,"h":64}},
+		{"filename":"star","frame":{"x":165,"y":375,"w":24,"h":22},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":24,"h":22},"sourceSize":{"w":24,"h":22}},
+		{"filename":"btn_back","frame":{"x":0,"y":117,"w":128,"h":128},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":128,"h":128},"sourceSize":{"w":128,"h":128}},
+		{"filename":"btn_back_hl","frame":{"x":258,"y":246,"w":128,"h":128},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":128,"h":128},"sourceSize":{"w":128,"h":128}},
+		{"filename":"btn_close","frame":{"x":436,"y":311,"w":48,"h":48},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":48,"h":48},"sourceSize":{"w":48,"h":48}},
+		{"filename":"btn_close_hl","frame":{"x":387,"y":311,"w":48,"h":48},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":48,"h":48},"sourceSize":{"w":48,"h":48}},
+		{"filename":"btn_play","frame":{"x":129,"y":246,"w":128,"h":128},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":128,"h":128},"sourceSize":{"w":128,"h":128}},
+		{"filename":"btn_play_hl","frame":{"x":0,"y":246,"w":128,"h":128},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":128,"h":128},"sourceSize":{"w":128,"h":128}},
+		{"filename":"btn_quest","frame":{"x":129,"y":117,"w":128,"h":128},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":128,"h":128},"sourceSize":{"w":128,"h":128}},
+		{"filename":"btn_quest_hl","frame":{"x":258,"y":117,"w":128,"h":128},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":128,"h":128},"sourceSize":{"w":128,"h":128}},
+		{"filename":"coin1","frame":{"x":0,"y":375,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"coin2","frame":{"x":33,"y":375,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"coin3","frame":{"x":66,"y":375,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"coin4","frame":{"x":99,"y":375,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"coin5","frame":{"x":420,"y":182,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}},
+		{"filename":"coin6","frame":{"x":132,"y":375,"w":32,"h":32},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":32,"h":32},"sourceSize":{"w":32,"h":32}}
+	],
+	"meta":{"app":"https://www.leshylabs.com/apps/sstool/","version":"Leshy SpriteSheet Tool v0.8.4","image":"spritesheet.png","size":{"w":512,"h":407},"scale":1}
+}
