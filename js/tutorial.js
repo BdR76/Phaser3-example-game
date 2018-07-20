@@ -23,7 +23,7 @@ var TutorScene = new Phaser.Class({
         var logo = this.add.sprite(400, 100, 'sprites', 'phaser3');
 		
 		// text
-		var txt = this.add.bitmapText(400, 300, 'fontwhite', 'This is a game example game.\nTake a look at the code\nto see how it works.');
+		var txt = this.add.bitmapText(400, 300, 'fontwhite', 'This is an example game.\nTake a look at the code\nto see how it works.');
 		txt.setOrigin(0.5).setCenterAlign();
 
 		// back Button

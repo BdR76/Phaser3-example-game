@@ -5,8 +5,8 @@ This is a [Phaser3](https://github.com/photonstorm/phaser) game template, a bare
 It is intended to show the structure of a typical Phaser3 game,
 and using some of the key features of Phaser.
 
-All the important features needed to create a game in Phaser v3.
-It's not an actual game but it's a starting point, a code template.
+It's a code template showing all the important features needed to create a game in Phaser v3.
+Not an actual game but a starting point example.
 
 ![preview screenshot](/preview.png?raw=true "preview")
 
@@ -20,7 +20,7 @@ This JavaScript game example shows:
 * Bitmaptext
 * Keyboard input
 * Mouse/touch input
-* Arcade overlap/collige
+* Arcade overlap/collide
 * Sound effects
 
 Still missing:
