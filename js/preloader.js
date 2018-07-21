@@ -9,8 +9,16 @@ var Preloader = new Phaser.Class({
 
     function Preloader ()
     {
+		// note: the pack:{files[]} acts like a pre-preloader
+		// this eliminates the need for an extra "boot" scene just to preload the loadingbar images
         Phaser.Scene.call(this, {
-			key: 'preloader'
+			key: 'preloader',
+			pack: {
+				files: [
+					{ type: 'image', key: 'loadingbar_bg', url: 'img/loadingbar_bg.png' },
+					{ type: 'image', key: 'loadingbar_fill', url: 'img/loadingbar_fill.png' }
+				]
+			}
 		});
     },
 	
@@ -61,7 +69,6 @@ var Preloader = new Phaser.Class({
 
 		// font
 		this.load.bitmapFont('fontwhite', 'img/fontwhite.png', 'img/fontwhite.xml');
-		this.load.bitmapFont('shortStack', 'img/shortStack.png', 'img/shortStack.xml');
 		
 		// sound effects
 		//this.load.audio('bg', [this.p('audio/bg.mp3'),this.p('audio/bg.ogg')]);

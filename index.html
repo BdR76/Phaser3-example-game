@@ -3,7 +3,6 @@
 <head>
     <script src="js/phaser.js"></script> 
     <script src="js/phaser_addon.js"></script> 
-    <script src="js/boot.js"></script> 
     <script src="js/preloader.js"></script> 
     <script src="js/menuscene.js"></script> 
     <script src="js/gamescene.js"></script> 
@@ -25,7 +24,7 @@
 					gravity: 0
 				}
 			},
-		scene: [ Boot, Preloader, MainMenu, TutorScene, GameScene ]
+		scene: [ Preloader, MainMenu, TutorScene, GameScene ]
 	};
 
 	var game = new Phaser.Game(config);
