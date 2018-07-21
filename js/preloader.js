@@ -24,7 +24,6 @@ var Preloader = new Phaser.Class({
 	
 	setPreloadSprite: function (sprite)
 	{
-		console.log("setPreloadSprite: sprite.width=" + sprite.width);
 		this.preloadSprite = { sprite: sprite, width: sprite.width, height: sprite.height };
 
 		//sprite.crop(this.preloadSprite.rect);
@@ -59,6 +58,7 @@ var Preloader = new Phaser.Class({
 	preload: function ()
 	{
 		// setup the loading bar
+		// note: images are available during preload because of the pack-property in the constructor
 		this.loadingbar_bg   = this.add.sprite(400, 300, "loadingbar_bg");
 		this.loadingbar_fill = this.add.sprite(400, 300, "loadingbar_fill");
 		this.setPreloadSprite(this.loadingbar_fill);
@@ -76,7 +76,7 @@ var Preloader = new Phaser.Class({
 		this.load.audio('bomb', ['snd/expl.mp3', 'snd/expl.ogg']);
 		this.load.audio('btn',  ['snd/btn.mp3', 'snd/btn.ogg']);
 		
-		// !! TESTING !! load the same image 100 times just to test the loading bar
+		// !! TESTING !! load the same image 500 times just to slow down the load and test the loading bar
 		for (var i = 0; i < 500; i++) {
 			this.load.image('testloading'+i, 'img/spritearray.png');
 		};
