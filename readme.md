@@ -7,6 +7,7 @@ and using some of the key features of Phaser.
 
 It's a code template showing all the important features needed to create a game in Phaser v3.
 Not an actual game but a starting point example.
+See also [this forum post](http://www.html5gamedevs.com/topic/38994-phaser3-game-example-using-scenes-a-preloader-and-a-loading-bar/).
 
 ![preview screenshot](/preview.png?raw=true "preview")
 

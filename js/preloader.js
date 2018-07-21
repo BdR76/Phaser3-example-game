@@ -3,15 +3,15 @@
 
 var Preloader = new Phaser.Class({
 
-    Extends: Phaser.Scene,
+	Extends: Phaser.Scene,
 
-    initialize:
+	initialize:
 
-    function Preloader ()
-    {
+	function Preloader ()
+	{
 		// note: the pack:{files[]} acts like a pre-preloader
 		// this eliminates the need for an extra "boot" scene just to preload the loadingbar images
-        Phaser.Scene.call(this, {
+		Phaser.Scene.call(this, {
 			key: 'preloader',
 			pack: {
 				files: [
@@ -20,25 +20,25 @@ var Preloader = new Phaser.Class({
 				]
 			}
 		});
-    },
+	},
 	
-    setPreloadSprite_new: function (sprite)
-    {
-		console.log("setPreloadSprite_new: sprite.width=" + sprite.width);
-        this.preloadSprite = { sprite: sprite, width: sprite.width, height: sprite.height };
+	setPreloadSprite: function (sprite)
+	{
+		console.log("setPreloadSprite: sprite.width=" + sprite.width);
+		this.preloadSprite = { sprite: sprite, width: sprite.width, height: sprite.height };
 
-        //sprite.crop(this.preloadSprite.rect);
-        sprite.visible = true;
+		//sprite.crop(this.preloadSprite.rect);
+		sprite.visible = true;
 
 		// set callback for loading progress updates
 		this.load.on('progress', this.onProgress, this );
 		this.load.on('fileprogress', this.onFileProgress, this );
 	},
 	
-    onProgress: function (value) {
+	onProgress: function (value) {
 
-        if (this.preloadSprite)
-        {
+		if (this.preloadSprite)
+		{
 			// calculate width based on value=0.0 .. 1.0
 			var w = Math.floor(this.preloadSprite.width * value);
 			
@@ -51,17 +51,17 @@ var Preloader = new Phaser.Class({
 		}
 	},
 	
-    onFileProgress: function (file) {
+	onFileProgress: function (file) {
 		debugger;
 		assetText.setText('onFileProgress: file.key=' + file.key);
 	},
 
-    preload: function ()
-    {
+	preload: function ()
+	{
 		// setup the loading bar
 		this.loadingbar_bg   = this.add.sprite(400, 300, "loadingbar_bg");
 		this.loadingbar_fill = this.add.sprite(400, 300, "loadingbar_fill");
-		this.setPreloadSprite_new(this.loadingbar_fill);
+		this.setPreloadSprite(this.loadingbar_fill);
 
 		// now load images, audio etc.
 		// sprites
@@ -81,10 +81,10 @@ var Preloader = new Phaser.Class({
 			this.load.image('testloading'+i, 'img/spritearray.png');
 		};
 		// !! TESTING !!
-    },
+	},
 
-    create: function ()
-    {
+	create: function ()
+	{
 
 		// also create animations
 		this.anims.create({
@@ -113,5 +113,5 @@ var Preloader = new Phaser.Class({
 		// start actual game
 		this.scene.start('mainmenu');
 
-    }
+	}
 });
