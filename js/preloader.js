@@ -40,9 +40,13 @@ var Preloader = new Phaser.Class({
 		{
 			// calculate width based on value=0.0 .. 1.0
 			var w = Math.floor(this.preloadSprite.width * value);
+			console.log('onProgress: value=' + value + " w=" + w);
+			
+			// sprite.frame.width cannot be zero
+			//w = (w <= 0 ? 1 : w);
 			
 			// set width of sprite			
-			this.preloadSprite.sprite.frame.width    = w;
+			this.preloadSprite.sprite.frame.width    = (w <= 0 ? 1 : w);
 			this.preloadSprite.sprite.frame.cutWidth = w;
 
 			// update screen
@@ -51,8 +55,7 @@ var Preloader = new Phaser.Class({
 	},
 	
 	onFileProgress: function (file) {
-		debugger;
-		assetText.setText('onFileProgress: file.key=' + file.key);
+		console.log('onFileProgress: file.key=' + file.key);
 	},
 
 	preload: function ()
@@ -64,7 +67,7 @@ var Preloader = new Phaser.Class({
 		this.setPreloadSprite(this.loadingbar_fill);
 
 		// now load images, audio etc.
-		// sprites
+		// sprites, note: see free sprite atlas creation tool here https://www.leshylabs.com/apps/sstool/
 		this.load.atlas('sprites', 'img/spritearray.png', 'img/spritearray.json');
 
 		// font
@@ -77,15 +80,14 @@ var Preloader = new Phaser.Class({
 		this.load.audio('btn',  ['snd/btn.mp3', 'snd/btn.ogg']);
 		
 		// !! TESTING !! load the same image 500 times just to slow down the load and test the loading bar
-		for (var i = 0; i < 500; i++) {
-			this.load.image('testloading'+i, 'img/spritearray.png');
-		};
+		//for (var i = 0; i < 500; i++) {
+		//	this.load.image('testloading'+i, 'img/spritearray.png');
+		//};
 		// !! TESTING !!
 	},
 
 	create: function ()
 	{
-
 		// also create animations
 		this.anims.create({
 				key: 'cointurn',
@@ -112,6 +114,5 @@ var Preloader = new Phaser.Class({
 
 		// start actual game
 		this.scene.start('mainmenu');
-
 	}
 });

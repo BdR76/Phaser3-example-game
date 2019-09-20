@@ -23,9 +23,6 @@ This JavaScript game example shows:
 * Mouse/touch input
 * Arcade overlap/collide
 * Sound effects
-
-Still missing:
-
-* Scaling or a scalemanager
+* Scalemanager
 
 Questions, comments -- Bas de Reuver (bdr1976@gmail.com)

@@ -115,10 +115,6 @@ var GameScene = new Phaser.Class({
     doOverlapItem: function (dud, obj) {
 		console.log('doOverlapItem -- hit!');
 		
-		//  Hide the sprite and disable the body
-		this.gameitems.killAndHide(obj);
-		obj.body.enable = false;
-		
 		if (obj.data.values.type == 1) {
 		//if (obj.getData("type") == 1) { // does the exact same
 			// coin
@@ -143,7 +139,17 @@ var GameScene = new Phaser.Class({
 			
 			// player dies
 			this.playerDies();
-		}
+		};
+
+
+		// Completely destroy and remove object from memory
+		obj.destroy();
+
+		// Hide the sprite and disable the body,
+		//   don't destroy sprite and potentially re-use memory at later time
+		//   when adding new sprites to this.gameitems
+		//this.gameitems.killAndHide(obj);
+		//obj.body.enable = false;
 	},
 	
     playerDies: function () {

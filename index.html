@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="js/phaser.js"></script> 
+    <script src="js/phaser.min.js"></script> 
     <script src="js/phaser_addon.js"></script> 
     <script src="js/preloader.js"></script> 
     <script src="js/menuscene.js"></script> 
@@ -22,8 +22,13 @@
 				default: 'arcade',
 				arcade: {
 					gravity: 0
+					//,debug: true
 				}
 			},
+		scale: {
+			mode: Phaser.Scale.FIT,
+			autoCenter: Phaser.Scale.CENTER_BOTH
+		},
 		scene: [ Preloader, MainMenu, TutorScene, GameScene ]
 	};
 
