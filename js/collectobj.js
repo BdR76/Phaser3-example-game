@@ -5,7 +5,7 @@
 // This is to separate the code and keep it manageable and organised
 
 var TYPE_COIN = 1;
-var TYPE_BOMB = 2;
+var TYPE_BOMB  = 2;
 
 class CollectObj extends Phaser.Physics.Arcade.Sprite {
 
@@ -20,15 +20,15 @@ class CollectObj extends Phaser.Physics.Arcade.Sprite {
 		// when scene updates, also update this object
 		//scene.events.on('update', this.update, this)
 
+		// save type for collision detection
+		this.setData("type", objtype); // use data for overlap later
+
+		// frame and animation for bomb or coin
 		if (objtype == TYPE_BOMB) {
 			// bomb
-			this.setData("type", 0); // use data for overlap later
 			this.setFrame('bomb');
 		} else {
-			// coin
-			this.setData("type", 1);
-			
-			// play animation with random frame offset, so that coins don't all spin exactly the same way
+			// coin, play animation with random frame offset, so that coins don't all spin exactly the same way
 			var r = Phaser.Math.RND.between(0, 7);
 			this.play('cointurn', null, r); // key, ignoreIfPlaying = null, startFrame = r; note: animation created in preloader scene
 		};

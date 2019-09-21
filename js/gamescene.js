@@ -111,8 +111,8 @@ var GameScene = new Phaser.Class({
     doOverlapItem: function (dud, obj) {
 		console.log('doOverlapItem -- hit!');
 		
-		if (obj.data.values.type == 1) {
-		//if (obj.getData("type") == 1) { // does the exact same
+		if (obj.data.values.type == TYPE_COIN) {
+		//if (obj.getData("type") == TYPE_COIN) { // does the exact same
 			// coin
 			// play coin sound
 			this.sfxcoin.play();
