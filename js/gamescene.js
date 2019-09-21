@@ -34,19 +34,15 @@ var GameScene = new Phaser.Class({
 		this.gameitems = this.physics.add.group();
 
         for (var i = 0; i < 20; i++) {
+			// parameters
             var x = Phaser.Math.RND.between(0, 800);
             var y = Phaser.Math.RND.between(0, 600);
-			
-			newobj = this.gameitems.create(x, y, 'sprites', 'coin1'); // Add 'sprite' to the group
-			if (i < 5) {
-				// bomb
-				newobj.setData("type", 0); // use data for overlap later
-				newobj.setFrame('bomb');
-			} else {
-				// coin
-				newobj.setData("type", 1);
-				newobj.play('cointurn'); // note: animation created in preloader scene
-			}
+			var objtype = (i < 5 ? TYPE_BOMB : TYPE_COIN);
+
+			// create custom sprite object
+			var newobj = new CollectObj(this, x, y, 'sprites', objtype);
+
+			this.gameitems.add(newobj);
         }
 
 		// coin particles
@@ -140,7 +136,6 @@ var GameScene = new Phaser.Class({
 			// player dies
 			this.playerDies();
 		};
-
 
 		// Completely destroy and remove object from memory
 		obj.destroy();

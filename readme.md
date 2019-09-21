@@ -17,6 +17,7 @@ This JavaScript game example shows:
 * A loading bar
 * Sprite atlas loading
 * Sprite animation
+* Custom sprite object
 * Buttons similar to Phaser v2
 * Bitmaptext
 * Keyboard input
